@@ -4,21 +4,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## This is a React app created to learn various aspects of react
 ###
-Basics of bootstrapping an app
-Using hooks 
-    useState
-    useEffect
-    useNavigate
-    useLocation
-Creating a custom Fetch hook
-Fetching data form a remote source
-UI Aspects:
-    - displaying a list using map
-    - embedded components
-    - passing props to components
-    - using links and passing state object via the link
-    - conditional displays
-    - input box
+- Basics of bootstrapping an app
+- Using hooks 
+    -- useState
+    -- useEffect
+    -- useNavigate
+    -- useLocation
+- Creating a custom Fetch hook
+- Fetching data form a remote source
+- UI Aspects:
+    -- displaying a list using map
+    -- embedded components
+    -- passing props to components
+    -- using links and passing state object via the link
+    -- conditional displays
+    -- input box
 
 
 ## Available Scripts
