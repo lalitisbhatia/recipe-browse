@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "title": "Blog 1",
+      "body": "Transitioned WeightWatchers Checkout application to new and resilient stack that led to annual savings of close 10000 customers lost due to technical issues during Checkout",
+      "author": "SMG",
+      "id": 1
+    },
+    {
+      "title": "Blog 2",
+      "body": "Improved Meeting searches that allowed close to real time update to the physical meetings schedules",
+      "author": "RSD",
+      "id": 2
+    },
+    {
+      "title": "Blog 3",
+      "body": "Delivered the first integration with a BlueTooth weight scale",
+      "author": "STR",
+      "id": 3
+    },
+    {
+      "title": "Blog 4",
+      "body": "Delivered close to 95% GDPR compliance within 3 months",
+      "author": "VVS",
+      "id": 4
+    }
+  ]
+}
