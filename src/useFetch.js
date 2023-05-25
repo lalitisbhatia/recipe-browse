@@ -12,6 +12,7 @@ export const useFetch = (api,cacheData) => {
     /********** End State declarations **********/
 
     const fetchFromApi = (url) =>{
+        console.log(url)
         const abortCont = new AbortController();
         fetch(url,{signal: abortCont.signal})
         .then(res => {
