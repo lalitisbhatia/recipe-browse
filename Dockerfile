@@ -13,8 +13,10 @@ RUN npm ci
 EXPOSE 3000
 CMD [ "npm", "start"]
 
-# Build the Docker image for the current folder and tag it with `recipe-brwse`
-# docker build . -t recipe-brwse
+# Build the Docker image for the current folder and tag it with `recipe-browse`
+#### docker build . -t recipe-browse
 
+# run the docker image
+### docker run -p 3000:3000 -d recipe-browse
 # Check the image was created
 #docker images | grep recipe-brwse
