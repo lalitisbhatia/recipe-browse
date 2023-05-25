@@ -6,19 +6,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ###
 - Basics of bootstrapping an app
 - Using hooks 
-    -- useState
-    -- useEffect
-    -- useNavigate
-    -- useLocation
+    - useState
+    - useEffect
+    - useNavigate
+    - useLocation
 - Creating a custom Fetch hook
 - Fetching data form a remote source
 - UI Aspects:
-    -- displaying a list using map
-    -- embedded components
-    -- passing props to components
-    -- using links and passing state object via the link
-    -- conditional displays
-    -- input box
+    - displaying a list using map
+    - embedded components
+    - passing props to components
+    - using links and passing state object via the link
+    - conditional displays
+    - input box
 
 
 ## Available Scripts
