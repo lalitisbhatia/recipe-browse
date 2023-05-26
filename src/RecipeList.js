@@ -14,7 +14,7 @@ const RecipeList = (props) => {
                 let showImage = !(images===undefined || images===null || Object.keys(images).length === 0) && Object.keys(images.SMALL).length!==0
                 // console.log("show Image: ", showImage)
                 // {console.log(images)}
-                return <div className="blog-preview" key={key||id}>   
+                return <div className="recipe-list-inner" key={key||id}>   
                     <Link  to={{pathname:`/recipes/${id}` }} state={{ id: {id} }}>
                         <div className="row">                       
                             <div className="column">

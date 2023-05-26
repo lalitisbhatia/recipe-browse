@@ -38,7 +38,7 @@
 /* blog previews / list */
 .blog-preview {
   padding: 1px 1px;
-  margin: 15px -40px;
+  margin: 15px 0px;
   border-bottom: 1px solid #fafafa;
 }
 .blog-preview:hover {
@@ -69,6 +69,30 @@
   /* padding:8px; */
   border-radius: 8px;
   cursor: pointer;
+}
+
+
+/* Recipes */
+.recipe-list {
+  padding: 1px 1px;
+  margin: 15px 0px;
+  border-bottom: 1px solid #fafafa;
+}
+.recipe-list-inner {
+  padding: 1px 1px;
+  margin: 15px 0px;
+  border-bottom: 1px solid #fafafa;
+}
+.recipe-list-inner:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.recipe-list-inner h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.recipe-list-inner a {
+  text-decoration: none;
 }
 .similar-recipes  {
   max-width: 500px;
@@ -146,7 +170,7 @@
   /* margin-left: 50px; */
 }
 .column {
-  /* flex: 50%; */
+  flex: 50%;
   
   padding: 1px;
   /* height: 250px; */
@@ -188,10 +212,11 @@
 }
 .search-input {
   display: block;
-  width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
+  width: calc(50% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
   font-size: 18px;
   font-weight: 600;
   color: #2cc2c2;
+  /* margin-left: 80px; */
   padding: 10px;
   border: 1px solid #2a96bd;
   border-radius: 10px;
