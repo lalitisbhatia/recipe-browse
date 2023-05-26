@@ -63,7 +63,7 @@ const RecipeDetails = (props) => {
                 <div >
                     <div className="similar-recipes">
                         <h2 style={{fontSize: 20,color: '#1a9c9c', marginBottom: 10, textAlign:"center" }}>Similar Recipes</h2>
-                        <p>gdfgddgdsfgdsfg  fgdgsdfgdfg dfgdfs gdfsgdsfg gfdsgbgdfs gdfs gdsf dfsg dsfgsfs</p>
+                        <p style={{width:500, padding:"4px 40px"}}>recipes similar to the one on the left go here</p>
                     </div>
                     
                 </div>
