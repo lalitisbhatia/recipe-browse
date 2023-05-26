@@ -19,7 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     - using links and passing state object via the link
     - conditional displays
     - input box
-
+- Dockerize the app, create an image and run it on a local container
 
 ## Available Scripts
 
