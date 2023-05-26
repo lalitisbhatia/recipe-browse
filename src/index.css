@@ -70,12 +70,19 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.similar-recipe  {
-  align-items: end;
+.similar-recipes  {
   max-width: 500px;
-  margin: 0 auto;
   
 }
+.similar-recipes h2 {
+  font-size: 20px;
+  color: #1a9c9c;
+  margin-bottom: 10px;
+  display: block;
+  align-items: center;
+  padding-bottom: 10px;;
+}
+
 .recipe-details  {
   align-items: end;
   max-width: 700px;

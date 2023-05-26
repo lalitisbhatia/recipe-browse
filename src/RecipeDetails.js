@@ -60,8 +60,12 @@ const RecipeDetails = (props) => {
                     </article>  }
                     </div>
                 </div>
-                <div className="similar-recipe">
-                    <p>Test column 2 for s</p>
+                <div >
+                    <div className="similar-recipes">
+                        <h2 style={{fontSize: 20,color: '#1a9c9c', marginBottom: 10, textAlign:"center" }}>Similar Recipes</h2>
+                        <p>gdfgddgdsfgdsfg  fgdgsdfgdfg dfgdfs gdfsgdsfg gfdsgbgdfs gdfs gdsf dfsg dsfgsfs</p>
+                    </div>
+                    
                 </div>
             </div>
             
