@@ -9,13 +9,14 @@ import Search  from './Search';
 import NotFound from './NotFound';
 import BlogTutorial from './BlogTutorial';
 import RecipeDetails from './RecipeDetails';
+import { config } from './config';
 
 
 
 function App() {
   const title = "Welcome to the Recipe search and browse";
   const likes = 50;
-  const link = "http://google.com"
+  const urls = config.ENV.LOCAL.URLS
   return (
     <Router>
       <div className="App">

@@ -8,9 +8,9 @@
 }
 .navbar {
   /* padding: 20px; */
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -30,7 +30,7 @@
   color: #f1356d;
 }
 .content {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
 }
@@ -38,7 +38,7 @@
 /* blog previews / list */
 .blog-preview {
   padding: 1px 1px;
-  margin: 15px -40px;
+  margin: 15px 0px;
   border-bottom: 1px solid #fafafa;
 }
 .blog-preview:hover {
@@ -71,6 +71,58 @@
   cursor: pointer;
 }
 
+
+/* Recipes */
+.recipe-list {
+  padding: 1px 1px;
+  margin: 15px 0px;
+  border-bottom: 1px solid #fafafa;
+}
+.recipe-list-inner {
+  padding: 1px 1px;
+  margin: 15px 0px;
+  border-bottom: 1px solid #fafafa;
+}
+.recipe-list-inner:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.recipe-list-inner h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.recipe-list-inner a {
+  text-decoration: none;
+}
+
+.similar-recipes  {
+  max-width: 500px;
+  margin-left: 40px;
+  /* border-left-style: solid;
+  border-left: thick green; */
+}
+.similar-recipes h2 {
+  font-size: 20px;
+  color: #1a9c9c;
+  margin-bottom: 10px;
+  display: block;
+  /* align-items: ; */
+  padding-bottom: 10px;
+  border-left: lightblue;
+  
+}
+
+.column-border-left {
+  border-left:lightblue;
+  padding: 4px 40px;
+  border-left-style:solid;
+}
+.recipe-details  {
+  align-items: end;
+  max-width: 700px;
+  margin: 0 auto;
+  
+}
 .recipe-details div {
   margin: 10px 0;
 }
@@ -125,12 +177,13 @@
   column-rule-width: thin;
   column-rule-style: solid;
   column-rule-color: lightblue;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 .column {
   flex: 50%;
   
-  /* padding: 16px; */
+  padding: 1px;
+  
   /* height: 250px; */
 }
 /* create new blog form */
@@ -170,10 +223,11 @@
 }
 .search-input {
   display: block;
-  width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
+  width: calc(50% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
   font-size: 18px;
   font-weight: 600;
   color: #2cc2c2;
+  /* margin-left: 80px; */
   padding: 10px;
   border: 1px solid #2a96bd;
   border-radius: 10px;
