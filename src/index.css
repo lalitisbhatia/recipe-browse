@@ -94,19 +94,29 @@
 .recipe-list-inner a {
   text-decoration: none;
 }
+
 .similar-recipes  {
   max-width: 500px;
-  
+  margin-left: 40px;
+  /* border-left-style: solid;
+  border-left: thick green; */
 }
 .similar-recipes h2 {
   font-size: 20px;
   color: #1a9c9c;
   margin-bottom: 10px;
   display: block;
-  align-items: center;
-  padding-bottom: 10px;;
+  /* align-items: ; */
+  padding-bottom: 10px;
+  border-left: lightblue;
+  
 }
 
+.column-border-left {
+  border-left:lightblue;
+  padding: 4px 40px;
+  border-left-style:solid;
+}
 .recipe-details  {
   align-items: end;
   max-width: 700px;
@@ -173,6 +183,7 @@
   flex: 50%;
   
   padding: 1px;
+  
   /* height: 250px; */
 }
 /* create new blog form */

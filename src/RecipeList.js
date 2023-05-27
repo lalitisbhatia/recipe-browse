@@ -15,7 +15,7 @@ const RecipeList = (props) => {
                 // console.log("show Image: ", showImage)
                 // {console.log(images)}
                 return <div className="recipe-list-inner" key={key||id}>   
-                    <Link  to={{pathname:`/recipes/${id}` }} state={{ id: {id} }}>
+                    <Link  to={{pathname:`/recipes/${id}` }} state={{ id: {id}, name:{name} }}>
                         <div className="row">                       
                             <div className="column">
                                 <p><span>{name} </span><span> <br></br> {Math.round(maxPointsPrecise||pts)} <b>POINTS:</b></span> </p>                        
@@ -27,8 +27,8 @@ const RecipeList = (props) => {
                     </Link>           
                     
                 </div>
-            })
-        }
+                })
+            }
     </div>
     )
 }

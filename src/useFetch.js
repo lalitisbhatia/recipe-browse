@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react"
 const cache = {};
-export const useFetch = (api,cacheData) => {
+export const useFetch = (api,cacheData,deps) => {
 /********** USING STATE **********/
     /********** useState **********/
     /********** Declare some state variables here **********/
@@ -30,7 +30,7 @@ export const useFetch = (api,cacheData) => {
             setIsPending(false)
             setError(null)
             setStatus('fetched');
-            console.log(cache)  
+            // console.log(cache)  
         }).catch (err => {
             console.log(err)
             if(err.name === 'AbortError'){
@@ -50,7 +50,7 @@ export const useFetch = (api,cacheData) => {
         //create an abort controller
         const abortCont = new AbortController();
 
-        console.log(`use effect ran`)
+        // console.log(`use effect ran`)
         //use effects has access to the state as well
         // console.log(blogs)
         // useEffect is also used for fetching data.
@@ -60,10 +60,10 @@ export const useFetch = (api,cacheData) => {
 
         const fetchData = async () => {
             setStatus('fetching');
-            console.log(status)
-            console.log(cache)
-            console.log(api)
-            console.log(cacheData)
+            // console.log(status)
+            // console.log(cache)
+            // console.log(api)
+            // console.log(cacheData)
             if (cacheData && cache[api]) {                
                 const data = cache[api];
                 setData(data);
@@ -80,7 +80,7 @@ export const useFetch = (api,cacheData) => {
         // this runs at the end of the useEffect hook
         return () => { abortCont.abort()}
 
-    },[])  //second arg is the dependency array so only if the state 'name changes will the useEffect hook run
+    },[deps])  //second arg is the dependency array so only if the state 'name changes will the useEffect hook run
 
     return {data, isPending, error}
 }
