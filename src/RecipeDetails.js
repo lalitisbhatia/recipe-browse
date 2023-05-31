@@ -85,7 +85,7 @@ const RecipeDetails = (props) => {
                 <div className="column"  >
 
                     <div className="similar-recipes">
-                        <h2 style={{fontSize: 20,color: '#1a9c9c', marginBottom: 10, textAlign:"center" }}>Similar Recipes</h2>
+                        <h2 style={{fontSize: 20,color: '#1a9c9c', marginBottom: 10, paddingLeft:"40px" }}>Similar Recipes</h2>
                         <p style={{width:500, padding:"4px 40px"}}></p>
                         <div className="column-border-left">
                             {similarRecipes && similarRecipes.data.map(({name,id,maxPointsPrecise,images}) => {             
