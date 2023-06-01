@@ -95,6 +95,9 @@
   text-decoration: none;
 }
 
+.tags-list {
+  font-size: 11px;
+}
 .similar-recipes  {
   max-width: 500px;
   margin-left: 40px;

@@ -40,7 +40,7 @@ const RecipeDetails = (props) => {
                     <div className="recipe-details">
                         {recipeDetail && <article>
                         <h2>{recipeDetail.data.name}</h2>
-                        <div><span>  <b><i>POINTS</i> : </b></span>{Math.round(recipeDetail.data.maxPointsPrecise)} </div>
+                        {/* <div><span>  <b><i>POINTS</i> : </b></span>{Math.round(recipeDetail.data.maxPointsPrecise)} </div> */}
                         <div className="row">
                             <div className="column">
                                 <span>{recipeDetail.data.description}</span>
@@ -55,7 +55,7 @@ const RecipeDetails = (props) => {
                         
                         {/* {console.log(recipeDetail.tags)} */}
                         <p><b>Tags: </b> {recipeDetail.data.tags.reduce((acc,tag) => {
-                            return acc+=tag + ", "
+                            return acc+=tag + " | "
                         },"")}</p>
 
                         <br></br>
@@ -97,7 +97,8 @@ const RecipeDetails = (props) => {
                                     <Link  to={{pathname:`/recipes/${id}` }} state={{ id: {id}, name:{name} }}>
                                         <div className="row">                       
                                             <div className="column">
-                                            <p><span>{name} </span><span> <br></br><b><i>POINTS: </i></b> {Math.round(maxPointsPrecise)} </span> </p>                        
+                                            <p><span>{name} </span> </p>                        
+                                            {/* <span> <br></br><b><i>POINTS: </i></b> {Math.round(maxPointsPrecise)} </span> */}
                                             </div>
                                             <div className="column">
                                                 <img src={showImage?(images.SMALL.url):""}></img>                      

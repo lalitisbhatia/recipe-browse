@@ -7,9 +7,9 @@ const RecipeList = (props) => {
     return (
         <div className="recipe-list">
             <h2>{props.title}</h2>
-            {props.recipes.map(({name,id,maxPointsPrecise,key,images,pts}) => {             
+            {props.recipes.map(({name,id,maxPointsPrecise,key,images,pts,tags}) => {             
                 // {let rid=recipe.id}
-                // {console.log(name)}
+                {console.log(tags.join(' | '))}
                 
                 let showImage = !(images===undefined || images===null || Object.keys(images).length === 0) && Object.keys(images.SMALL).length!==0
                 // console.log("show Image: ", showImage)
@@ -18,7 +18,11 @@ const RecipeList = (props) => {
                     <Link  to={{pathname:`/recipes/${id}` }} state={{ id: {id}, name:{name} }}>
                         <div className="row">                       
                             <div className="column">
-                                <p><span>{name} </span><span> <br></br> {Math.round(maxPointsPrecise||pts)} <b>POINTS:</b></span> </p>                        
+                                <p><span><b>{name} </b></span><span>  </span> </p>
+                                <div className="tags-list">
+                                    {tags.join(' | ')}
+                                </div>                        
+                                {/* {Math.round(maxPointsPrecise||pts)} <b>POINTS:</b> */}
                             </div>
                             <div className="column">
                                 <img src={showImage?(images.SMALL.url):""}></img>                      
