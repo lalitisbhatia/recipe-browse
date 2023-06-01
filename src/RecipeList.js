@@ -9,7 +9,7 @@ const RecipeList = (props) => {
             <h2>{props.title}</h2>
             {props.recipes.map(({name,id,maxPointsPrecise,key,images,pts,tags}) => {             
                 // {let rid=recipe.id}
-                {console.log(tags.join(' | '))}
+                // {console.log(tags.join(' | '))}
                 
                 let showImage = !(images===undefined || images===null || Object.keys(images).length === 0) && Object.keys(images.SMALL).length!==0
                 // console.log("show Image: ", showImage)
@@ -19,9 +19,9 @@ const RecipeList = (props) => {
                         <div className="row">                       
                             <div className="column">
                                 <p><span><b>{name} </b></span><span>  </span> </p>
-                                <div className="tags-list">
+                                {tags && <div className="tags-list">
                                     {tags.join(' | ')}
-                                </div>                        
+                                </div>   }                     
                                 {/* {Math.round(maxPointsPrecise||pts)} <b>POINTS:</b> */}
                             </div>
                             <div className="column">
