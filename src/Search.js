@@ -1,17 +1,20 @@
 import { useState, useEffect, useRef } from "react";
 // import RecipeList from './RecipeList'
 import foods from "./foodsRaw";
-import { generateTrie } from "./createTrie";
-import { search } from "./trieHelper";
 import FoodList from "./FoodList"
-
+import { useFetch } from "./useFetch";
+import {generateTrie,search,TrieNode} from "fast-trie-search"
 
 const Search = () => {
+
+  const {data: foodTrie_api} = useFetch("http://localhost:3400/foods/utils/trie",true)
+  {foodTrie_api && console.log(foodTrie_api)}
+
   let foodTrieRef = useRef(0);
   let foodTrie;
   let test = "test"
   useEffect(() => {
-    foodTrieRef.current = generateTrie(foods);
+    foodTrieRef.current = generateTrie(foods,'suggestion',{splitRegex:"/[ -]/"});
     console.log("use effect running")
     console.log(foodTrieRef.current)
   }, [foodTrie, test])
@@ -28,7 +31,7 @@ const Search = () => {
     console.log("inside handler: string = ", str)
 
     setSearchTerm(str)
-    setPredictions(search(str, 0, foodTrieRef.current));
+    setPredictions(search(str, 0, foodTrie_api));
     // topPredictions = predictions.slice(0,100)
   }
   return (
@@ -38,6 +41,8 @@ const Search = () => {
         type="text"
         value={searchTerm}
         onChange={searchHandler}
+        placeholder="search foods"
+        disabled={!foodTrie_api}
       />
       <br></br>
       <br></br>

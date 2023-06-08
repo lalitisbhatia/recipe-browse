@@ -70,27 +70,30 @@ export const recipeSearch = (str,i,root) =>{
     
     if(i===str.length && i!==0){
         // console.log(str, i,root.words)
-        return root.words
-        // let suggestions = root.words.map((item)=>{
-        //     return item
-        // })
-        // console.log(str, i,suggestions)
-        // var result = suggestions.reduce((unique, o) => {
-        //     if(!unique.some(obj => obj.suggestion === o.suggestion)) {
-        //       unique.push(o);
-        //     }
-        //     return unique;
-        // },[]);
-
-        // // console.log(str, i,result)
-        // let sortedResult = result.sort((a,b) => b.count - a.count);
-        // return result
+        return root.words      
     }
         
     if(!root.map[str[i]])
         return [];
 
     return recipeSearch(str,i+1,root.map[str[i]]);
+}
+
+
+
+
+
+export const foodSearch = (str,i,root) => {
+    // console.log(str, i)
+    if(i===str.length && i!==0){
+        // console.log(str, i,root.words)
+        return root.words
+    }
+        
+    if(!root.map[str[i]])
+        return [];
+
+    return foodSearch(str,i+1,root.map[str[i]]);
 }
 
 // export default search

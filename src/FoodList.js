@@ -8,7 +8,7 @@ const FoodList = (props) => {
             
             {props.foods.map((food) => (                
                 <div className="blog-preview" key={Math.random()*100000}>                    
-                        <p><span>{food.suggestion}, </span><span><b>count:</b>  {food.count}</span> </p>
+                        <p><span>{food.nodeObj.name}, </span><span><b>count:</b>  {food.nodeObj.ct}</span> </p>
                     
                 </div>
                 

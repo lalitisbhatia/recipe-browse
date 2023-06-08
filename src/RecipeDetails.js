@@ -16,7 +16,7 @@ const RecipeDetails = (props) => {
     const navigate = useNavigate();
     
     const {data: recipeDetail,isPending,error} = useFetch(`http://localhost:3300/recipes/${recipeId}`,true,[recipeId])
-    const {data: similarRecipes,isPending1,error1} = useFetch(`http://localhost:3300/recipes/similar/${recipeId}`)
+    const {data: similarRecipes,isPending1,error1} = useFetch(`http://localhost:3300/recipes/similar/${recipeId}`,true,[recipeId])
     // console.log("fetched recipe detail = ", recipeDetail);
     
     // console.log(recipeDetail)
@@ -32,6 +32,18 @@ const RecipeDetails = (props) => {
     //   }, [])
     
     // showImage = !(recipeDetail.images===undefined || recipeDetail.images===null || Object.keys(recipeDetail.images).length === 0);
+    const getImageUrl = () => {
+        if(!(recipeDetail.data.images===undefined || recipeDetail.data.images===null || Object.keys(recipeDetail.data.images).length === 0)){
+            //images object exists
+            //now check if the Large image exists
+            
+            if(recipeDetail.data.images.LARGE) return recipeDetail.data.images.LARGE.url;
+            if(recipeDetail.data.images.MEDIUM) return recipeDetail.data.images.MEDIUM.url;   
+            
+            
+        }
+        return null
+    }
     return (
         
         
@@ -46,7 +58,7 @@ const RecipeDetails = (props) => {
                                 <span>{recipeDetail.data.description}</span>
                             </div>
                             <div className="column">
-                                <img src={ !(recipeDetail.data.images===undefined || recipeDetail.data.images===null || Object.keys(recipeDetail.data.images).length === 0)?recipeDetail.data.images.LARGE.url:""}></img>        
+                                <img src={getImageUrl()} width="300" height="300"></img>        
                             </div>
                         </div>
                         

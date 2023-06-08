@@ -1,14 +1,13 @@
 import { useState, useRef,useEffect } from "react";
-
 import { useFetch } from "./useFetch";
 import RecipeList from './RecipeList'
-import { recipeSearch } from "./trieHelper";
-// import { useFetch } from "./useFetch";
+
+import {generateTrie,search,TrieNode} from "fast-trie-search"
 
 const Home = () => {
 
-    let [searchTerm, setSearchTerm] = useState("")
-    let [searchResults, setSearchResults] = useState([])
+  let [searchTerm, setSearchTerm] = useState("")
+  let [searchResults, setSearchResults] = useState([])
     
   const searchHandler = (e) => {
     const str = e.target.value;
@@ -18,22 +17,20 @@ const Home = () => {
     console.log(str)
     console.log(recipeTrie)
     // console.log(recipeSearch(str, 0, recipeTrie));
-    let searchRes = recipeSearch(str, 0, recipeTrie).map(res => {
+    let searchRes = search(str, 0, recipeTrie).map(res => {
         return res.nodeObj;
     })
-    
+
     console.log(searchRes)
     setSearchResults(searchRes);
-    // topPredictions = predictions.slice(0,100)
+
   }
 
-
-    // const recipeTrie = localStorage.getItem("recipeTrie")
-    const {data: recipes,isPending,error} = useFetch("http://localhost:3300/recipes?num=20",true)
-    const {data: recipeTrie} = useFetch("http://localhost:3300/recipes/utils/trie",true)
+    const {data: recipes,isPending,error} = useFetch("http://localhost:3400/recipes?num=20",true)
+    const {data: recipeTrie} = useFetch("http://localhost:3400/recipes/utils/trie",true)
     
-    // console.log(recipeTrie)
-
+    
+    console.log(recipeTrie)
 
     /********** RETURN COMPONENT CODE STARTS HERE **********/
     return (         
